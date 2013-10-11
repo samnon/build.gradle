@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.5.+'
+    }
+}
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 12
+        targetSdkVersion 16
+    }
+}
+
+List dmapDependency = ["com.android.support:support-v4:13.0.0", fileTree (dir: "C://Users/Keegan/Dropbox/Uni/CSE4MPC/Labs/Lab 6/CoolMapApp/libs",includes: ['*.jar'])]
+
+dependencies {
+    compile dmapDependency
+}
+
